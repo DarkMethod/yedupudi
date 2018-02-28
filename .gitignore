@@ -1,3 +1,6 @@
 codebase/server/node_modules/*
 codebase/client/node_modules/*
+resource/docs/*
+resource/key/*
+resource/screenshots/*
 
