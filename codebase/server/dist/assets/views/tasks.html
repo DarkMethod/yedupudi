@@ -1,0 +1,121 @@
+<!-- start: BREADCRUMB -->
+<div class="breadcrumb-wrapper">
+    <h4 class="mainTitle no-margin" translate="dashboard.WELCOME" translate-values="{ appName: app.name }"><!-- NGTABLE -->WELCOME TO DASHBOARD</h4>
+	<!--translate="sidebar.nav.tables.DATA"-->
+    <div ncy-breadcrumb class="pull-right"></div>
+</div>
+<!-- end: BREADCRUMB -->
+<!-- start: INLINE EDIT EXAMPLE -->
+<div class="container-fluid container-fullw-dashboard bg-white">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-white">
+                <div class="panel-body">
+                    <h5 class="over-title margin-bottom-15"><!--Inline --> <span class="text-bold"><!--edit example-->Tasks</span></h5>
+                    <div ng-controller="taskCtrl">
+						<div ng-if="user.type === 'client'" class="table-responsive">
+                            <table ng-table="tableParams" class="table">
+                                <tbody ng-repeat="task in $data">
+                                    <tr id="tr{{task.uuid}}" ng-class-odd="'odd'" ng-class-even="'even'">
+                                        <td class="rowTd" data-title="'Service'" sortable="'service'">{{task.service}}</td>
+                                        <td class="rowTd" data-title="'Date of Request'" sortable="'dateOfRequest'">{{task.dateOfRequest}}</td>
+                                        <td class="rowTd" data-title="'Payment'" sortable="'paymentStatus'">{{task.paymentStatus}}</td>
+                                        <td class="rowTd" data-title="'Price/Quote'" sortable="'price'">	
+											{{task.price}}
+										</td>
+                                        <td class="rowTd" data-title="'Start Date'" sortable="'start'">
+											<span ng-if="task.start">{{task.start}}</span>
+											<span ng-if="!task.start">Not provided</span>
+										</td>
+                                        <td class="rowTd" data-title="'End Date'" sortable="'end'">
+											<span ng-if="task.end">{{task.end}}</span>
+											<span ng-if="!task.end">Not provided</span>
+										</td>
+                                        <td class="rowTd" data-title="'Status'" sortable="'status'">
+											<span ng-if="task.status">{{task.status}}</span>
+											<span ng-if="!task.status">To Be Updated</span>
+										</td>	
+                                        <td class="rowTd">
+                                            <div class="pull-right margin-right-10">
+                                                <input type="button" class="btn btn-primary btn-o btn-sm" value="Details" ng-click="setDetailsId(task.uuid)">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr ng-show="detailsId===task.uuid">
+                                        <td colspan="8" style="border-left:1px solid #DDDDDD;border-bottom:1px solid #DDDDDD;border-right:1px solid #DDDDDD;" ng-include src="'assets/views/task_details.html'"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+						<div ng-if="user.type === 'admin'" class="table-responsive">
+                            <table ng-table="tableParams" class="table">
+                                <tbody ng-repeat="task in $data">
+                                    <tr id="tr{{task.uuid}}" ng-class-odd="'odd'" ng-class-even="'even'">
+                                        <td class="rowTd" data-title="'Service'" sortable="'service'">{{task.service}}</td>
+                                        <td class="rowTd" data-title="'Date of Request'" sortable="'dateOfRequest'">{{task.dateOfRequest}}</td>
+                                        <td class="rowTd" data-title="'Payment'" sortable="'paymentStatus'">{{task.paymentStatus}}</td>
+                                        <td class="rowTd" data-title="'Price/Quote'" sortable="'price'">	
+											{{task.price}}
+										</td>
+                                        <td class="rowTd" data-title="'Start Date'" sortable="'start'">
+											<span ng-if="task.start">{{task.start}}</span>
+											<span ng-if="!task.start">Not provided</span>
+										</td>
+                                        <td class="rowTd" data-title="'End Date'" sortable="'end'">
+											<span ng-if="task.end">{{task.end}}</span>
+											<span ng-if="!task.end">Not provided</span>
+										</td>
+                                        <td class="rowTd" data-title="'Status'" sortable="'status'">
+											<span ng-if="task.status">{{task.status}}</span>
+											<span ng-if="!task.status">To Be Updated</span>
+										</td>
+                                        <td class="rowTd" data-title="'Actions'">
+											<div class="visible-md visible-lg hidden-sm hidden-xs">
+												<div>
+													<a href="#" class="btn btn-transparent btn-xs" tooltip-placement="top" uib-tooltip="Edit" ng-click="setEditId(task.uuid)"><i class="fa fa-pencil"></i></a>
+													<a href="#" class="btn btn-transparent btn-xs tooltips" tooltip-placement="top" uib-tooltip="Details" ng-click="setDetailsId(task.uuid)"><i class="fa fa-info"></i></a>
+													<a href="#" class="btn btn-transparent btn-xs tooltips" tooltip-placement="top" uib-tooltip="Remove" ng-click="removeTask(task.uuid)"><i class="fa fa-trash fa fa-white"></i></a>
+												</div>
+												<!--
+												<div ng-show="task.edit">
+													<a href="#" class="btn btn-transparent btn-xs" tooltip-placement="top" uib-tooltip="Save" ng-click="editTask(task.uuid)"><i class="fa fa-check"></i></a>
+													<a href="#" class="btn btn-transparent btn-xs tooltips" tooltip-placement="top" uib-tooltip="Cancel" ng-click="task.edit=false"><i class="fa fa-times fa fa-white"></i></a>
+												</div>
+												-->
+											</div>
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="btn-group" uib-dropdown>
+													<button type="button" class="btn btn-primary btn-o btn-sm dropdown-toggle" uib-dropdown-toggle>
+														<i class="fa fa-cog"></i>&nbsp;<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu pull-right dropdown-light" role="menu">
+														<li>
+															<a href="#" ng-click="setEditId(task.uuid)">Edit</a>
+														</li>
+														<li>
+															<a href="#" ng-click="setDetailsId(task.uuid)">Details</a>
+														</li>
+														<li>
+															<a href="#" ng-click="removeTask(task.uuid)">Remove</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+						            </tr>
+                                    <tr ng-show="detailsId===task.uuid">
+                                        <td colspan="8" style="border-left:1px solid #DDDDDD;border-bottom:1px solid #DDDDDD;border-right:1px solid #DDDDDD;" ng-include  src="'assets/views/task_details.html'"></td>
+                                    </tr>
+									<tr ng-show="editId===task.uuid">
+                                        <td colspan="8" style="border-left:1px solid #DDDDDD;border-bottom:1px solid #DDDDDD;border-right:1px solid #DDDDDD;" ng-include src="'assets/views/edit_task.html'"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end: INLINE EDIT EXAMPLE -->

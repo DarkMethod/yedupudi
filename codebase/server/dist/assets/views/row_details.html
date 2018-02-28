@@ -1,0 +1,28 @@
+<div class="row">
+	<input type="hidden" name="id" value="{{task.uuid}}">
+	<div class="col-sm-4">
+		<strong>Customer Details</strong>
+		<p>Name  : {{task.name}}</p>
+		<p>Email : {{task.email}}</p>
+		<p>Phone : {{task.phone}}</p>
+	</div>
+	<div class="col-sm-4">
+		<strong>Items Requested</strong>
+		<ul ng-if="task.items">
+			<li ng-repeat="item in task.items">
+				{{ item }}
+			</li>
+		</ul>
+		<p ng-if="!task.items">
+			No items were mentioned.
+		</p>
+	</div>	
+	<div class="col-sm-4">
+		<strong>Message</strong> 
+		<p ng-if="task.message">{{task.message}}</p>
+		<p ng-if="!task.message">No message</p>
+	</div>
+	<div class="col-sm-4 text-center">
+		<input type="button" class="btn btn-primary btn-sm" value="Close" ng-click="setEditId(-1)">
+	</div>
+</div>

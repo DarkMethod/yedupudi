@@ -1,0 +1,65 @@
+<div class="row">
+	<form role="form" name="editForm" ng-submit="editTask(task.uuid)">
+		<div class="col-sm-4">
+			<fieldset>
+				<legend>Service Period</legend>
+				<div class="form-group">
+					<label for="start">
+						Start Date
+					</label>
+					<input type="text" placeholder="Enter start date" class="form-control" name="start" ng-model="edit.start" uib-datepicker-popup="{{format}}"  show-weeks="false" is-open="startopened" ng-init="startopened = false" ng-click="startopened = !startopened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" close-text="Close" show-button-bar="false" >
+				</div>
+				<div class="form-group">
+					<label for="end">
+						End Date
+					</label>
+					<input type="text" placeholder="Enter end date" class="form-control" name="end" ng-model="edit.end" uib-datepicker-popup="{{format}}"  show-weeks="false" is-open="endopened" ng-init="endopened = false" ng-click="endopened = !endopened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" close-text="Close" show-button-bar="false">
+				</div>
+			</fieldset>
+		</div>
+		<div class="col-sm-4">
+			<fieldset>
+				<legend>Price & Status</legend>
+				<div class="form-group">
+					<label for="price">
+						Price
+					</label>
+					<input type="text" placeholder="Enter price" class="form-control" name="price" ng-model="edit.price">
+				</div>
+				<div class="form-group">
+					<label for="status">
+						Status
+					</label>
+					<select ng-if="task.price==='quote'" class="cs-select cs-skin-slide" name="status" ng-model="edit.status">
+						<option value="Preparing Quote">Preparing Quote</option>
+						<option value="Sent Quote">Sent Quote</option>
+						<option value="Received Request">Received Request</option>
+						<option value="Waiting For Information">Waiting For Information</option>
+						<option value="Could Not Proceed">Could Not Proceed</option>
+						<option value="Abandoned">Abandoned</option>
+						<option value="Request Complete">Request Complete</option>
+						<option value="" selected disabled>Assign a status to the task</option>
+					</select>
+					<select ng-if="task.price!=='quote'" class="cs-select cs-skin-slide" name="status" ng-model="edit.status">
+						<option value="Received Request">Received Request</option>
+						<option value="In Progress">In Progress</option>
+						<option value="Waiting For Information">Waiting For Information</option>
+						<option value="Could Not Proceed">Could Not Proceed</option>
+						<option value="Abandoned">Abandoned</option>
+						<option value="Request Complete">Request Complete</option>
+						<option value="" selected disabled style="color:#DDDDDD">Assign a status to the task</option>
+					</select>
+				</div>
+			</fieldset>
+		</div>
+		<div class="col-sm-4">
+		<div class="row">
+			<div class="col-sm-12">
+				<button class="btn btn-primary btn-sm edit-task-btn" type="submit">
+					Save Changes
+				</button>
+				<input type="button" class="btn btn-primary btn-sm edit-task-btn margin-left-10" value="Cancel" ng-click="setEditId(-1)">
+			</div>
+		</div>
+	</form>
+</div>

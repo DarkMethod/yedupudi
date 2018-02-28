@@ -1,0 +1,38 @@
+<div class="row">
+	<input type="hidden" name="id" value="{{task.uuid}}">
+	<div class="col-sm-3">
+		<div class="user-left min-height-200">
+			<strong>Customer Details</strong>
+			<hr class="bg-details">
+			<p>Name  : {{task.name}}</p>
+			<p>Email : {{task.email}}</p>
+			<p>Phone : {{task.phone}}</p>
+		</div>
+	</div>
+	<div class="col-sm-3 ">
+		<div class="user-left min-height-200">
+			<strong>Items Requested</strong>
+			<hr class="bg-details">
+			<ul style="margin-left: -24px;" ng-if="task.items[0]!==''">
+				<li ng-repeat="item in task.items">
+					{{ item }}
+				</li>
+			</ul>
+			<p ng-if="task.items[0]===''">
+				No items were provided.
+			</p>
+		</div>	
+	</div>	
+	<div class="col-sm-5">
+		<div class="min-height-200">
+			<strong>Message</strong> 
+			<hr class="bg-details">
+			<p ng-if="task.message">{{task.message}}</p>
+			<p ng-if="!task.message">No message was provided.</p>
+		</div>
+		
+	</div>
+	<div class="col-sm-1 text-center">
+		<a ng-click="setDetailsId(-1)"><span class="fa-stack" tooltip-placement="bottom" uib-tooltip="Close"><i class="fa fa-circle-o text-primary fa-stack-2x"></i><i class="fa fa-times text-primary fa-stack-1x"></i></span></a>
+	</div>
+</div>

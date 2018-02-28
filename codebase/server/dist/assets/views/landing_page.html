@@ -1,0 +1,704 @@
+<!-- start: LANDING PAGE -->
+<div class="landing-page">
+	<!-- start: SECTION 0 -->
+    <div id="section-0">
+        <div class="navbar navbar-default" id="landing-header" role="navigation" landing-header>
+            <!-- start: TOP NAVIGATION CONTAINER -->
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- start: RESPONSIVE MENU TOGGLER -->
+                    <a class="landing-menu-toggler btn btn-red hidden-sm hidden-md hidden-lg mobile-button" id="landing-menu-toggler" ng-click="landingNavbarCollapsed = !landingNavbarCollapsed">
+                        <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                    </a>
+                    <!-- end: RESPONSIVE MENU TOGGLER -->
+                    <!-- start: LOGO -->
+                    <a href="#section-0" du-smooth-scroll du-scrollspy class="navbar-brand">
+						<img src="assets/images/white-logo-transparent-background.png" alt="Yedupudi" style="height:80px;width:auto">
+						<!--
+						YEDUPUDI
+						<h2 id="landing-page-brand-title">{{app.name}}</h2>
+						<img src="assets/images/logo.png" alt="Clip-Two">
+						-->
+					</a>
+                    <!-- end: LOGO -->
+                </div>
+                <div class="navbar-collapse collapse" uib-collapse="landingNavbarCollapsed" ng-init="landingNavbarCollapsed = true" off-click="landingNavbarCollapsed = true" off-click-if='!landingNavbarCollapsed' off-click-filter="'#landing-menu-toggler'">
+                    <ul class="nav navbar-nav navbar-right" ct-fullheight="window" data-ct-fullheight-exclusion="#landing-header" data-ct-fullheight-if="isSmallDevice">
+                        <li class="active">
+                            <a href="#section-0" du-smooth-scroll du-scrollspy offset="30" ng-click="landingNavbarCollapsed = true">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section-1" du-smooth-scroll du-scrollspy offset="30" ng-click="landingNavbarCollapsed = true">
+                                Features
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section-2" du-smooth-scroll du-scrollspy offset="30" ng-click="landingNavbarCollapsed = true">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section-3" du-smooth-scroll du-scrollspy offset="30" ng-click="landingNavbarCollapsed = true">
+                                Testimonials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section-4" du-smooth-scroll du-scrollspy offset="30" ng-click="landingNavbarCollapsed = true">
+                                FAQs</span>
+                            </a>
+                        </li>
+						<li>
+                            <a href="#section-5" du-smooth-scroll du-scrollspy offset="30" ng-click="landingNavbarCollapsed = true">
+                               About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section-6" du-smooth-scroll du-scrollspy offset="30" ng-click="landingNavbarCollapsed = true">
+                                Contact Us
+                            </a>
+                        </li>
+						<li>
+                            <a offset="30" ng-click="landingNavbarCollapsed = true">
+                                <i style="color:#FFFFFF" class="fa fa-fw fa-phone"></i>+91 7667002222
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+                    <div class="close-handle visible-xs-block menu-toggler" ng-click="landingNavbarCollapsed = true" ng-swipe-up="landingNavbarCollapsed = true">
+                        <div class="arrow-left"></div>
+                        <div class="arrow-right"></div>
+                    </div>
+                    <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+                </div>
+            </div>
+            <!-- end: TOP NAVIGATION CONTAINER -->
+        </div>
+        <div class="landing-content">
+            <div class="container">
+            <div class="caption-box">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3 col-sm-offset-3">
+                        <div class="custom-caption" >
+                            <h1 class="text-white text-bold text-center">
+								"We will get your work done 
+								for you back home.<br>
+								Trust us, we understand."
+                            </h1>
+							<p class="text-center margin-top-15">
+								<button class="btn btn-red" style="border-color:#FFFFFF" ui-sref="login.login" role="button" v-pressable>
+									Sign In
+								</button>
+								<a ui-sref="login.registration" style="font-weight:bold;" class="btn btn-default text-dark">
+									Sign Up for a free account
+								</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+				<!--
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-4 col-sm-offset-3">
+						<div class="text-center">
+							<p>
+								<button class="btn btn-red" style="border-color:#FFFFFF" ui-sref="login.login" role="button" v-pressable>
+									Sign In
+								</button>
+								<a ui-sref="login.registration" style="font-weight:bold" class="btn btn-default">
+									Sign Up for a free account
+								</a>
+                            </p>
+						</div>
+					</div>
+				</div>
+				-->
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: SECTION 0 -->
+    <!-- start: SECTION 1 -->
+	<div id="section-1">
+		<section class="container-fluid container-fullw bg-white padding-bottom-30 features-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="padding-top-30 padding-bottom-30">FEATURES</h2>
+                        <hr>
+                        <p class="margin-bottom-30">
+                            We are on a mission to make the life of NRI, that is you, easier by providing you professional service for all your diverse day to day tasks and other routine tasks in India.
+							. We strongly believe that a <span class="text-dark text-bold">professionally managed</span> and <span class="text-dark text-bold">timely delivery</span> of <span class="text-dark text-bold">quality service</span> offering will replace the current methods, and give the NRI a much needed <span class="text-dark text-bold">peace of mind</span>.
+                        </p>
+                    </div>
+                </div>
+				<div class="row text-center">
+					<div class="col-md-3 padding-top-10">
+						<div class="features-block">
+						<div class="block">
+                             <i class="text-red fa fa-black-tie fa-5x"></i>
+                        </div>
+						<h4 class="text-uppercase margin-top-20 text-bold text-red">Professional</h4>
+						<p class="margin-top-5 text-dark">
+							All services are carried out by experienced professionals in that area. 
+							Our supervisors will be available to ensure that it is a job well done.
+						</p>
+						</div>
+					</div>
+					<div class="col-md-3 padding-top-10">
+						<div class="features-block">
+						<div class="block">
+                            <i class="text-red fa fa-clock-o fa-5x"></i>
+                        </div>
+						<h4 class="text-uppercase margin-top-20 text-bold text-red">24/7</h4>
+						<p class="margin-top-5 text-dark">
+							You can reach us 24/7 from any part of the world and we will be happy to attend to you right away.
+						</p>
+						</div>
+					</div>
+					<div class="col-md-3 padding-top-10">
+						<div class="features-block">
+						<div class="block">
+                            <i class="text-red fa fa-shopping-bag fa-5x"></i>
+                        </div>
+						<h4 class="text-uppercase margin-top-20 text-bold text-red">Affordable Price</h4>
+						<p class="margin-top-5 text-dark">
+							We go beyond just carrying out the tasks, we ensure that it is exactly upto your standards at very nominal prices.
+						</p>
+					</div>
+					</div>
+					<div class="col-md-3 padding-top-10">
+						<div class="features-block">
+						<div class="block">
+                            <i class="text-red fa fa-adjust fa-5x"></i>
+                        </div>
+						<h4 class="text-uppercase margin-top-20 text-bold text-red">Recurring &amp; one-time services</h4>
+						<p class="margin-top-5 text-dark">
+							Recurring services like health, education or rent related could be paid 3, 6, 9 or 12 months in advance.
+							Other services can be one time payments.
+						</p>
+					</div>
+					</div>
+				</div>
+            </div>
+        </section>
+    </div>
+    <!-- end: SECTION 1 -->
+    <!-- start: SECTION 2 -->
+    <div id="section-2">
+        <section class="container-fluid container-fullw bg-red padding-bottom-30 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="padding-top-30 padding-bottom-30 text-white">SERVICES</h2>
+                        <hr class="white-line">
+                        <p class="margin-bottom-30">
+                            We along with our team of trained staff, extend <span class="text-bold">a whole range of essential services</span> to all who are in need of them. 
+							For your convenience we have listed some of the most common requests we have come across.
+							If you do not find a desired service listed, just go ahead and <span class="text-bold">place your request on <span id="landing-quote-link" class="cl-effect-3"><a href="#section-5" du-smooth-scroll du-scrollspy><span class="text-bold text-white">'Get A Quick Quote'</span></a></span></span> and we should be able to handle it.
+                        </p>
+                    </div>
+                </div>	
+				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a padding-top-10">
+				<div class="row min-height-200">
+                    <div class="col-md-3">
+						<div>
+							<i class='hi-icon fa fa-home fa-5x'><a ui-sref="services.property_management"></a></i>
+						</div>
+						<a ui-sref="services.property_management"><h4 class="padding-top-5 text-white">PROPERTY MANAGEMENT</h4></a>
+                    </div>
+					<div class="col-md-3">
+						<div>
+							<i class='hi-icon fa fa-ambulance fa-5x'><a ui-sref="services.medical_services"></a></i>
+						</div>
+						<a ui-sref="services.medical_services"><h4 class="padding-top-5 text-white">MEDICAL SERVICES</h4></a>
+					</div>
+					<div class="col-md-3">
+						<div>
+							<i class='hi-icon fa fa-gavel fa-5x'><a ui-sref="services.legal_services"></a></i>
+						</div>
+						<a ui-sref="services.legal_services"><h4 class="padding-top-5 text-white">AUDITING &amp; LEGAL SERVICES</h4></a>
+					</div>
+					<div class="col-md-3">
+						<div>
+							<i class='hi-icon fa fa-book fa-5x'><a ui-sref="services.document_procurement"></a></i>
+						</div>
+						<a ui-sref="services.document_procurement"><h4 class="padding-top-5 text-white">DOCUMENT PROCUREMENT</h4></a>	
+                    </div>
+                </div>
+				<div class="row min-height-200">
+					<div class="col-md-3">
+                        <div>
+							<i class='hi-icon fa fa-plane fa-5x'><a ui-sref="services.travel_services"></a></i>
+						</div>
+						<a ui-sref="services.travel_services"><h4 class="padding-top-5 text-white">TRAVEL</h4></a>
+                    </div>
+					<div class="col-md-3">
+						<div>
+							<i class='hi-icon fa fa-graduation-cap fa-5x'><a ui-sref="services.education_tracking"></a></i>
+						</div>
+						<a ui-sref="services.education_tracking"><h4 class="padding-top-5 text-white">EDUCATION &amp; TRACKING</h4></a>
+                    </div>
+					<div class="col-md-3">
+						<div>
+							<i class='hi-icon fa fa-birthday-cake fa-5x'><a ui-sref="services.event_management"></a></i>
+						</div>
+						<a ui-sref="services.event_management"><h4 class="padding-top-5 text-white">EVENT MANAGEMENT</h4></a>	
+                    </div>
+                </div>
+                </div>
+            </div>
+		</section>
+    </div>
+    <!-- end: SECTION 2 -->
+    <!-- start: SECTION 3 -->
+    <div id="section-3">
+        <section class="container-fluid container-fullw padding-bottom-30 bg-white no-border section-testimonials">
+            <div class="container">
+                <div class="row padding-bottom-40">
+                    <div class="col-md-12">
+                        <h2 class="center padding-top-30 padding-bottom-30">TESTIMONIALS</h2>
+						<hr>
+                        <div id="testimonial" ng-appear="animationBlock4 = true">
+                            <slick dots=true infinite=false speed=300 slides-to-show=1 slides-to-scroll=1>
+                                <div class="padding-left-50 padding-right-50">
+                                    <div class="testimonial-container center">
+                                        <img src="assets/images/team-1.jpg" class="img-circle testimonial-thumb" alt="" ng-class="{'animated flipInY': animationBlock4}" />
+                                        <p class="testimonial_author" ng-class="{'animated fadeInDown': animationBlock4}">
+                                            Robert Kelley - <span class="author_company text-red">Apple Inc</span>
+                                        </p>
+                                        <h4 class="testimonial-text" ng-class="{'animated fadeInUp': animationBlock4}">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo maiorum intellegebat, liber regione eu sit. Mea cu case ludus integre, vide viderer eleifend ex mea. His ay diceret, cum et atqui placerat.</h4>
+                                    </div>
+                                </div>
+                                <div class="padding-left-50 padding-right-50">
+                                    <div class="testimonial-container center">
+                                        <img src="assets/images/team-2.jpg" class="img-circle testimonial-thumb" alt="" ng-class="{'animated flipInY': animationBlock4}" />
+                                        <p class="testimonial_author" ng-class="{'animated fadeInDown': animationBlock4}">
+                                            William Greeson - <span class="author_company text-red">Microsoft Corporation</span>
+                                        </p>
+                                        <h4 class="testimonial-text" ng-class="{'animated fadeInUp': animationBlock4}">Etiam interdum elementum elit interdum vulputate. Vivamus tristique, dolor ut sodales pulvinar, diam metus facilisis dui, vel pretium ex elit non dui.</h4>
+                                    </div>
+                                </div>
+                                <div class="padding-left-50 padding-right-50">
+                                    <div class="testimonial-container center">
+                                        <img src="assets/images/team-3.jpg" class="img-circle testimonial-thumb" alt="" ng-class="{'animated flipInY': animationBlock4}" />
+                                        <p class="testimonial_author" ng-class="{'animated fadeInDown': animationBlock4}">
+                                            Angela N. Seaton - <span class="author_company text-red">Amazon.com</span>
+                                        </p>
+                                        <h4 class="testimonial-text" ng-class="{'animated fadeInUp': animationBlock4}">Suspendisse mauris nunc, luctus suscipit volutpat sed, sodales non mi. Quisque pretium gravida urna maximus imperdiet. In blandit nisi ipsum.</h4>
+                                    </div>
+                                </div>
+                            </slick>
+                        </div>
+                    </div>
+                </div>
+                <hr class="margin-bottom-40" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="media padding-left-10 padding-right-10">
+                            <a href="#" class="pull-left">
+                                <img alt="image" class="img-circle testimonial-thumb" src="assets/images/team-6.jpg">
+                            </a>
+                            <div class="media-body ">
+                                <strong>Todd S. Smith</strong> - <strong class="text-red">Amazon.com</strong>
+                                <br>
+                                <small class="text-light">Today 4:55 PM</small>
+                                <div class="well padding-15 margin-top-15">
+                                    In placerat feugiat odio a ullamcorper. Aliquam vel justo vel nisl sollicitudin bibendum. Donec a vehicula risus, a pellentesque metus.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="media padding-left-10 padding-right-10">
+                            <a href="#" class="pull-left">
+                                <img alt="image" class="img-circle testimonial-thumb" src="assets/images/team-7.jpg">
+                            </a>
+                            <div class="media-body ">
+                                <strong>Leslie M. Day</strong> - <strong class="text-red">Apple Inc</strong>
+                                <br>
+                                <small class="text-light">Today 10:28 AM</small>
+                                <div class="well padding-15 margin-top-15">
+                                    Sed feugiat iaculis dignissim. Nam sed sem a nisl porttitor fermentum nec et ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="media padding-left-10 padding-right-10">
+                            <a href="#" class="pull-left">
+                                <img alt="image" class="img-circle testimonial-thumb" src="assets/images/team-10.jpg">
+                            </a>
+                            <div class="media-body ">
+                                <strong>Francisco S. Harding</strong> - <strong class="text-red">Apple Inc</strong>
+                                <br>
+                                <small class="text-light">Yesterday 3:52 PM</small>
+                                <div class="well padding-15 margin-top-15">
+                                    Suspendisse vel felis lorem. Phasellus interdum, est ut fringilla tristique, purus arcu congue magna, sit amet ornare neque purus sed nisl.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="media padding-left-10 padding-right-10">
+                            <a href="#" class="pull-left">
+                                <img alt="image" class="img-circle testimonial-thumb" src="assets/images/team-11.jpg">
+                            </a>
+                            <div class="media-body ">
+                                <strong>Manuel Barnhardt</strong> - <strong class="text-red">Microsoft Corporation</strong>
+                                <br>
+                                <small class="text-light">Yesterday 6:11 PM</small>
+                                <div class="well padding-15 margin-top-15">
+                                    Curabitur facilisis pretium cursus. Nulla aliquam mauris ac tortor condimentum, eu tempor ante efficitur. Nunc vestibulum nibh quis dolor scelerisque dapibus eget a est.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end: SECTION 3 -->
+	 <!-- start: SECTION 4 -->
+    <div id="section-4">
+		<section class="container-fluid container-fullw padding-bottom-50 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center padding-top-30 padding-bottom-30">FAQs</h2>
+                        <hr />
+						<uib-accordion close-others="oneAtATime" class="accordion bg-red">
+                            <uib-accordion-group is-open="question1.open">
+                                <uib-accordion-heading>
+                                    Why would I pick you over my friends and relatives? <i class="pull-right" ng-class="{'ti-angle-down': question1.open, 'ti-angle-right': !question1.open}"></i>
+                                </uib-accordion-heading>
+                                <p>
+									As we all feel the age old method of falling back on friends and relatives to do the job for you does not work as efficiently in modern times and often causes a rift between relations. Everyone wanted to have their tasks managed by the subject matter experts.
+									Yedupudi employs qualified personnel to do the homework for you, thus saving your family the trouble and stress of running from pillar to post.
+								</p>
+							</uib-accordion-group>
+                            <uib-accordion-group is-open="question2.open">
+                                <uib-accordion-heading>
+                                    How do I register for the service ? <i class="pull-right" ng-class="{'ti-angle-down': question2.open, 'ti-angle-right': !question2.open}"></i>
+                                </uib-accordion-heading>
+                                <p>
+									To register with our company you can create a free Yedupudi account using 'Sign Up for a free account' button at the top. You can also sign up with us using either your Google or Facebook account at the Sign Up page.
+								</p>
+                            </uib-accordion-group>
+							<uib-accordion-group is-open="question3.open">
+                                <uib-accordion-heading>
+                                    Where can I get application forms? <i class="pull-right" ng-class="{'ti-angle-down': question3.open, 'ti-angle-right': !question3.open}"></i>
+                                </uib-accordion-heading>
+                                <p>
+									All services can be registered online on our website.
+								</p>
+                            </uib-accordion-group>
+							<uib-accordion-group is-open="question4.open">
+                                <uib-accordion-heading>
+                                    Do I have to file application form online? <i class="pull-right" ng-class="{'ti-angle-down': question4.open, 'ti-angle-right': !question4.open}"></i>
+                                </uib-accordion-heading>
+                                <p>
+									Yes. Application process is done online through our website.
+								</p>
+                            </uib-accordion-group>
+							<uib-accordion-group is-open="question5.open">
+                                <uib-accordion-heading>
+                                    Can I make copies of the application forms for filling out and mailing it out? <i class="pull-right" ng-class="{'ti-angle-down': question5.open, 'ti-angle-right': !question5.open}"></i>
+                                </uib-accordion-heading>
+                                <p>
+									We maintain a paperless application process. Hence it will be mostly via online.
+									We require some supporting documents such as proof of ownership and authorization for services like property management.
+								</p>
+                            </uib-accordion-group>
+							<uib-accordion-group is-open="question6.open">
+                                <uib-accordion-heading>
+                                    Do I have to notarize the application form? <i class="pull-right" ng-class="{'ti-angle-down': question6.open, 'ti-angle-right': !question6.open}"></i>
+                                </uib-accordion-heading>
+                                <p>
+									No. The application process is done online.
+								</p>
+                            </uib-accordion-group>
+							<uib-accordion-group is-open="question7.open">
+                                <uib-accordion-heading>
+                                    What is the registration fee? <i class="pull-right" ng-class="{'ti-angle-down': question7.open, 'ti-angle-right': !question7.open}"></i>
+                                </uib-accordion-heading>
+                                <p>
+									The fees are associated with service enrollment only.
+								</p>
+                            </uib-accordion-group>
+							<uib-accordion-group is-open="question8.open">
+                                <uib-accordion-heading>
+                                    Do you take credit cards? <i class="pull-right" ng-class="{'ti-angle-down': question8.open, 'ti-angle-right': !question8.open}"></i>
+                                </uib-accordion-heading>
+                                <p>
+									Yes. We honor all major credit cards. Payment can be made through Paypal.
+								</p>
+                            </uib-accordion-group>
+                        </uib-accordion>                        
+                    </div>
+                </div>
+            </div>
+        </section>	
+	</div>
+	<!-- end: SECTION 4 -->
+	<!-- start: SECTION 5 -->
+	<div id="section-5">
+		<section class="container-fluid container-fullw padding-bottom-30 bg-red">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center text-white padding-top-30 padding-bottom-30">ABOUT US</h2>
+                        <hr class="white-line"/>
+					</div>
+					<div class="col-md-12">
+						<p class="margin-bottom-30">
+							<span class="text-bold">Yedupudi is a result of like minded Non-Resident Indians from Tamil Nadu who faced a lot of issues</span> in starting and completing tasks in India in their absence.
+							The need was for an entity that could be trusted to take care of tasks very important and personal to them, <span class="text-bold">like managing the health of their aged parents or
+							monitoring the education of their children in colleges or building their dream house.</span> Yedupudi aims to be your trustworthy professional partner who will take
+							care of things on your behalf.<span class="text-bold"> Yedupudi understands the NRI.</span>
+						</p>	
+					</div>
+                </div>
+				<div class="row padding-top-10">
+                    <div class="col-sm-8 col-sm-offset-2">
+						<div class="quote-block" ng-controller="servicesCtrl">
+						 	<h2 class="text-center text-bold text-white">Get A Quick Quote</h2>
+							<p class="text-center text-bold text-white">
+								Tell us how we can help you by entering your details and any comments you may have in the form.
+							</p>
+							<form class="form-quote" name="Form" ng-submit="requestQuote('query')" novalidate>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group" ng-class="{'has-error':Form.name.$dirty && Form.name.$invalid, 'has-success':Form.name.$valid}">
+											<input type="text" class="form-control" name="name" ng-model="quote.name" placeholder="Name*" required>
+											<span class="error text-small block" ng-if="Form.name.$dirty && Form.name.$error.required">Name is required.</span>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
+											<input type="email" class="form-control" name="email" ng-model="quote.email" placeholder="Email*" required>
+											<span class="error text-small block" ng-if="Form.email.$dirty && Form.email.$error.required">Email is required.</span>
+											<span class="error text-small block" ng-if="Form.email.$dirty && Form.email.$invalid">Please provide a valid email.</span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group" ng-class="{'has-error':Form.service.$dirty && Form.service.$invalid, 'has-success':Form.service.$valid}">
+											<select class="cs-select cs-skin-slide" name="service" ng-model="quote.service">
+												<option value="" disabled selected>Service you are interested in*</option>
+												<option value="property">Property Management</option>
+												<option value="medical">Medical Services</option>
+												<option value="legal">Auditing & Legal Services</option>
+												<option value="document">Document Procurement</option>
+												<option value="travel">Travel & Tourism</option>
+												<option value="education">Education & Tracking</option>
+												<option value="misc">Can't fint what I need</option>
+											</select>
+											<span class="error text-small block" ng-if="Form.service.$dirty && Form.service.$error.required">Mention the service you need help with</span>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group" ng-class="{'has-error':Form.phone.$dirty && Form.phone.$invalid, 'has-success':Form.phone.$valid}">
+											<input type="phone" class="form-control" name="phone" ng-model="quote.phone" placeholder="Phone No.*" required>
+											<span class="error text-small block" ng-if="Form.phone.$dirty && Form.phone.$error.required">Phone no. is required.</span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea ng-model="quote.message" name ="message" class="form-control autosize area-animated msd-elastic: \n;" placeholder="Add a message..."></textarea>
+										</div>
+									</div>
+								</div>
+								<div id="button-space" class="row padding-top-10">
+									<button type="submit" ng-disabled="Form.$invalid" style="border-color:#FFFFFF" class="btn btn-red btn-wide btn-scroll btn-scroll-top fa-envelope-o">
+										<span>Submit</span>
+									</button>
+								</div>
+							</form>	
+						</div>
+                    </div>
+                </div>
+            </div>
+        </section>	
+    </div>	
+	<!-- end: SECTION 5 -->
+	<!-- start: SECTION 6 -->
+	<div id="section-6">
+        <section class="container-fluid container-fullw bg-white padding-bottom-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center padding-bottom-30 padding-top-30">CONTACT US</h2>
+                         <hr/>
+						<p class="center margin-bottom-30">
+                            Contact our Indian office or speak to any of our respresentatives in your local country.<br>
+							Alternatively, you could also <span class="text-bold text-dark">email us on support@yedupudi.com</span> or <span class="text-bold text-dark">call us at  +91 7667002222 </span> to speak to our customer service executive.
+                        </p>
+                    </div>
+                </div>
+					<div class="row text-center">
+						<div class="col-lg-3 padding-top-10">
+							<div class="contacts-block">
+								<address>
+									<h4 class="margin-bottom-5 text-bold text-red text-uppercase">India</h4>
+									<p class="text-dark">
+										1234 Street Name
+										<br>
+										City Name, United States
+										<br>
+										<abbr title="Phone">P:</abbr> (123) 456-7890
+									</p>
+								</address>
+							</div>
+						</div>
+						<div class="col-lg-3 padding-top-10">
+							<div class="contacts-block">
+								<address>
+									<h4 class="margin-bottom-5 text-bold text-red text-uppercase">UAE</h4>
+									<p class="text-dark">
+										1234 Street Name
+										<br>
+										City Name, United States
+										<br>
+										<abbr title="Phone">P:</abbr> (123) 456-7890
+									</p>
+								</address>
+							</div>
+						</div>
+						<div class="col-lg-3 padding-top-10">
+							<div class="contacts-block">
+								<address>
+									<h4 class="margin-bottom-5 text-bold text-red text-uppercase">Singapore</h4>
+									<p class="text-dark">
+										1234 Street Name
+										<br>
+										City Name, United States
+										<br>
+										<abbr title="Phone">P:</abbr> (123) 456-7890
+									</p>
+								</address>
+							</div>
+						</div>
+						<div class="col-lg-3 padding-top-10">
+							<div class="contacts-block">
+								<address>
+									<h4 class="margin-bottom-5 text-bold text-red text-uppercase">Malaysia</h4>
+									<p class="text-dark">
+										1234 Street Name
+										<br>
+										City Name, United States
+										<br>
+										<abbr title="Phone">P:</abbr> (123) 456-7890
+									</p>
+								</address>
+							</div>
+						</div>
+					</div>
+					<div class="row text-center">
+						<div class="col-lg-3 padding-top-10">
+							<div class="contacts-block">
+								<address>
+									<h4 class="margin-bottom-5 text-bold text-red text-uppercase">Australia</h4>
+									<p class="text-dark">
+										1234 Street Name
+										<br>
+										City Name, United States
+										<br>
+										<abbr title="Phone">P:</abbr> (123) 456-7890
+									</p>
+								</address>
+							</div>
+						</div>
+						<div class="col-lg-3 padding-top-10">
+							<div class="contacts-block">
+								<address>
+									<h4 class="margin-bottom-5 text-bold text-red text-uppercase">UK</h4>
+									<p class="text-dark">
+										1234 Street Name
+										<br>
+										City Name, United States
+										<br>
+										<abbr title="Phone">P:</abbr> (123) 456-7890
+									</p>
+								</address>
+							</div>
+						</div>
+						<div class="col-lg-3 padding-top-10">
+							<div class="contacts-block">
+								<address>
+									<h4 class="margin-bottom-5 text-bold text-red text-uppercase">US</h4>
+									<p class="text-dark">
+										1234 Street Name
+										<br>
+										City Name, United States
+										<br>
+										<abbr title="Phone">P:</abbr> (123) 456-7890
+									</p>
+								</address>
+							</div>
+						</div>
+						<div class="col-lg-3 padding-top-10">
+							<div class="contacts-block" style="min-height:144px;">
+									<div class="row">
+										<h4 class="margin-bottom-15 text-bold text-red">Follow us on</h4>
+									</div>
+									<div class="row hi-icon-wrap hi-icon-effect-2 hi-icon-effect-2b">
+										<i class='hi-icon-contact fa fa-twitter'><a href="http://twitter.com"></a></i>
+										<i class='hi-icon-contact fa fa-facebook margin-left-15'><a href="http://facebook.com"></a></i>
+									</div>
+								</div>
+							</div>
+						</div>
+				<!--
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="mailto:test@email.com" class="btn btn-red margin-top-30">
+                            Subscribe to Our Newsletter
+                        </a>
+                        <p class="margin-top-10">
+                            Or follow us on your favorite social media sites
+                        </p>
+                        <div class="social-icons">
+                            <ul>
+                                <li class="social-twitter" uib-tooltip="Twitter" tooltip-placement="top">
+                                    <a target="_blank" href="#">
+                                        Twitter
+                                    </a>
+                                </li>
+                                <li class="social-linkedin" uib-tooltip="Linkedin" tooltip-placement="top">
+                                    <a target="_blank" href="#">
+                                        Linkedin
+                                    </a>
+                                </li>
+                                <li class="social-facebook" uib-tooltip="Facebook" tooltip-placement="top">
+                                    <a target="_blank" href="#">
+                                        Facebook
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				-->
+                <div class="row padding-top-30">
+                    <div class="col-md-12 text-center">
+                        <p class="margin-top-20">
+                            &copy; {{app.year}} <span class="text-bold text-uppercase">{{ app.author }}</span>. <span translate="footer.copyright.MESSAGE">All rights reserved</span>
+                            <br>
+							<!--
+                            Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.
+							-->
+						</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end: SECTION 6 -->
+</div>
+<!-- end: LANDING PAGE -->

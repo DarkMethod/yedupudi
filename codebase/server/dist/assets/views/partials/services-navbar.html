@@ -1,0 +1,229 @@
+<div ng-controller="authCtrl" class="navbar navbar-default bg-red" id="landing-header" role="navigation" landing-header>
+            <!-- start: TOP NAVIGATION CONTAINER -->
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- start: RESPONSIVE MENU TOGGLER -->
+                    <a class="landing-menu-toggler btn btn-dark-red hidden-sm hidden-md hidden-lg mobile-button" id="landing-menu-toggler" ng-click="landingNavbarCollapsed = !landingNavbarCollapsed">
+                        <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                    </a>
+                    <!-- end: RESPONSIVE MENU TOGGLER -->
+                    <!-- start: LOGO -->
+                    <a ui-sref="landing.welcome" class="navbar-brand">
+						<img src="assets/images/white-logo-transparent-background.png" alt="Yedupudi" style="height:80px;width:auto">
+						<!--
+						YEDUPUDI
+						<h2 id="landing-page-brand-title">{{app.name}}</h2>
+						
+						<img src="assets/images/logo.png" alt="Clip-Two">
+						-->
+					</a>
+                    <!-- end: LOGO -->
+                </div>
+                <div class="navbar-collapse collapse" uib-collapse="landingNavbarCollapsed" ng-init="landingNavbarCollapsed = true" off-click="landingNavbarCollapsed = true" off-click-if='!landingNavbarCollapsed' off-click-filter="'#landing-menu-toggler'">
+                    <ul ng-if="!isAuthenticated()" class="nav navbar-nav navbar-right" ct-fullheight="window" data-ct-fullheight-exclusion="#landing-header" data-ct-fullheight-if="isSmallDevice">
+                        <li>
+                            <a ui-sref="#" du-smooth-scroll du-scrollspy offset="30" ng-click="openModal('signIn', 'signInModalContent.html', 'authCtrl')">
+                               Orders
+                            </a>
+                        </li>
+						<li id="services-dropdown" class="dropdown" uib-dropdown on-toggle="toggled(open)">
+							<a class="dropdown-toggle" uib-dropdown-toggle>Services<i id="services-caret" class="fa fa-caret-down fa-fw"></i></a>
+							<ul class="dropdown-menu dropdown-light  animated fadeInUpShort" style="min-width:140px;">
+								<li>
+									<a ui-sref="services.property_management"><i class="fa fa-home margin-left-5 margin-right-10"></i>Property Management</a>
+								</li>
+								<li>
+									<a ui-sref="services.medical_services"><i class="fa fa-ambulance margin-left-5 margin-right-10"></i>Medical</a>
+								</li>
+								<li>
+									<a ui-sref="services.legal_services"><i class="fa fa-gavel margin-left-5 margin-right-10"></i>Auditing & Legal</a>
+								</li>
+								<li>
+									<a ui-sref="services.document_procurement"><i class="fa fa-book margin-left-5 margin-right-10"></i>Document Procurement</a>
+								</li>
+								<li>
+									<a ui-sref="services.travel_services"><i class="fa fa-plane margin-left-5 margin-right-10"></i>Travel & Tourism</a>
+								</li>
+								<li>
+									<a ui-sref="services.education_tracking"><i class="fa fa-graduation-cap margin-left-5 margin-right-10"></i>Education & Tracking</a>
+								</li>
+								<li>
+									<a ui-sref="services.event_management"><i class="fa fa-birthday-cake margin-left-5 margin-right-10"></i>Event Management</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+                            <a ui-sref="#" du-smooth-scroll du-scrollspy offset="30" ng-click="openModal('signIn', 'signInModalContent.html', 'authCtrl')">
+                                Sign In
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="#" du-smooth-scroll du-scrollspy offset="30" ng-click="openModal('signUp', 'signUpModalContent.html', 'authCtrl')">
+                                Sign Up
+                            </a>
+                        </li>
+                    </ul>
+					<ul ng-if="isAuthenticated()" class="nav navbar-nav navbar-right" ct-fullheight="window" data-ct-fullheight-exclusion="#landing-header" data-ct-fullheight-if="isSmallDevice">
+                        <li>
+                            <a ui-sref="app.dashboard"  du-smooth-scroll du-scrollspy offset="30">
+                              Orders
+                            </a>
+                        </li>
+                        <li id="services-dropdown" class="dropdown" uib-dropdown on-toggle="toggled(open)">
+							<a class="dropdown-toggle" uib-dropdown-toggle>Services<i id="services-caret" class="fa fa-caret-down fa-fw"></i></a>
+							<ul class="dropdown-menu dropdown-light  animated fadeInUpShort" style="min-width:140px;">
+								<li>
+									<a ui-sref="services.property_management"><i class="fa fa-home margin-left-5 margin-right-10"></i>Property Management</a>
+								</li>
+								<li>
+									<a ui-sref="services.medical_services"><i class="fa fa-ambulance margin-left-5 margin-right-10"></i>Medical</a>
+								</li>
+								<li>
+									<a ui-sref="services.legal_services"><i class="fa fa-gavel margin-left-5 margin-right-10"></i>Auditing & Legal</a>
+								</li>
+								<li>
+									<a ui-sref="services.document_procurement"><i class="fa fa-book margin-left-5 margin-right-10"></i>Document Procurement</a>
+								</li>
+								<li>
+									<a ui-sref="services.travel_services"><i class="fa fa-plane margin-left-5 margin-right-10"></i>Travel & Tourism</a>
+								</li>
+								<li>
+									<a ui-sref="services.education_tracking"><i class="fa fa-graduation-cap margin-left-5 margin-right-10"></i>Education & Tracking</a>
+								</li><li>
+									<a ui-sref="services.event_management"><i class="fa fa-birthday-cake margin-left-5 margin-right-10"></i>Event Management</a>
+								</li>
+							</ul>
+						</li>
+						<li id="account-dropdown" class="dropdown" uib-dropdown on-toggle="toggled(open)">
+							<a class="dropdown-toggle" uib-dropdown-toggle>My Account<i style="color:white;" id="services-caret" class="fa fa-caret-down fa-fw"></i></a>
+							<ul class="dropdown-menu dropdown-light  animated fadeInUpShort" style="min-width:140px;">
+								<li>
+									<a ui-sref="app.dashboard"><i class="fa fa-file-text margin-left-5 margin-right-10"></i>Dashboard</a>
+								</li>
+								<li>
+									<a ui-sref="app.profile"><i class="fa fa-user margin-left-5 margin-right-10"></i>Profile </a>
+								</li>
+								<li>
+									<a ui-sref="app.messages"><i class="fa fa-envelope margin-left-5 margin-right-10"></i>Messages</a>
+								</li>
+								<li>
+									<a ng-click="signOut()"><i class="fa fa-sign-out margin-left-5 margin-right-10"></i> Sign Out </a>
+								</li>
+							</ul>
+						</li>
+                    </ul>
+                    <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+                    <div class="close-handle visible-xs-block menu-toggler" ng-click="landingNavbarCollapsed = true" ng-swipe-up="landingNavbarCollapsed = true">
+                        <div class="arrow-left"></div>
+                        <div class="arrow-right"></div>
+                    </div>
+                    <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+                </div>
+            </div>
+            <!-- end: TOP NAVIGATION CONTAINER -->
+        </div>
+		<script type="text/ng-template" id="signInModalContent.html">
+                <div class="modal-header text-center padding-top-20 margin-bottom-0 no-border">
+                    <a ng-click="cancelModal('signIn')"><i class="ti ti-close ti-tw pull-right"></i></a>
+					<h5 class="modal-title text-bold text-dark">SIGN IN TO YOUR YEDUPUDI ACCOUNT</h5>
+                    <p class="text-small margin-top-10">DON'T HAVE AN ACCOUNT YET?<a ng-click="openModal('signUp', 'signUpModalContent.html', 'authCtrl', 'signIn')"> SIGN UP</a></p>
+                </div>
+               <div class="modal-body padding-bottom-50 padding-top-0">
+					<div class="row">	
+						<div class="col-md-6 col-md-offset-3">
+							<p class=" text-small text-bold text-dark text-center">SIGN IN VIA</p>
+							 <div class="social-icons text-center">
+								<ul>
+									<li class="social-google" uib-tooltip="Google" tooltip-placement="top">
+										<a ng-click="authenticate('google')"> Google </a>
+									</li>
+									<li class="social-facebook" uib-tooltip="Facebook" tooltip-placement="top">
+										<a ng-click="authenticate('facebook')"> Facebook </a>
+									</li>
+								</ul>
+							</div>
+							<div class="padding-top-10 padding-bottom-10">
+								<p id="modal-divider" class="text-small text-bold text-dark"><span id="modal-divider-content">OR</span></p>
+							</div>
+							<form class="form-login" name="Form" ng-submit="signIn()" novalidate>
+								<div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
+									<input type="email" class="form-control" name="email" ng-model="user.email" placeholder="Email*" required>
+									<span class="error text-small block" ng-if="Form.email.$dirty && Form.email.$error.required">Email is required.</span>
+								</div>
+								<div class="form-group form-actions" ng-class="{'has-error':Form.password.$dirty && Form.password.$invalid, 'has-success':Form.password.$valid}">
+									<input type="password" class="form-control password" name="password" ng-model="user.password" placeholder="Password*" required>
+									<span class="error text-small block" ng-if="Form.password.$dirty && Form.password.$error.required">Password is required</span>
+								</div>
+								<div class="text-center padding-bottom-10">
+									<a ng-click="cancelModal('signIn','login.forgot')"> I forgot my password </a>
+								</div>
+								<div class="form-actions">
+									<button type="submit" ng-disabled="Form.$invalid" class="btn btn-red btn-block">
+										Sign in
+									</button>
+								</div>
+							</form>	
+						</div>
+					</div>
+                </div>
+            </script>
+			<script type="text/ng-template" id="signUpModalContent.html">
+                <div class="modal-header text-center padding-top-20 margin-bottom-0 no-border">
+                    <a ng-click="cancelModal('signUp')"><i class="ti ti-close ti-tw pull-right"></i></a>
+					<h5 class="modal-title text-bold text-dark">CREATE A FREE ACCOUNT AT YEDUPUDI</h5>
+                    <p class="text-small margin-top-10">ALREADY HAVE AN ACCOUNT? <a ng-click="openModal('signIn', 'signInModalContent.html', 'authCtrl', 'signUp')">SIGN IN</a></p>
+                </div>
+               <div class="modal-body padding-bottom-50 padding-top-0">
+					<div class="row">	
+						<div class="col-md-6 col-md-offset-3">
+							<p class=" text-small text-bold text-dark text-center">SIGN UP VIA</p>
+							 <div class="social-icons text-center">
+								<ul>
+									<li class="social-google" uib-tooltip="Google" tooltip-placement="top">
+										<a ng-click="authenticate('google')"> Google </a>
+									</li>
+									<li class="social-facebook" uib-tooltip="Facebook" tooltip-placement="top">
+										<a ng-click="authenticate('facebook')"> Facebook </a>
+									</li>
+								</ul>
+							</div>
+							<div class="padding-top-10 padding-bottom-10">
+								<p id="modal-divider" class="text-small text-bold text-dark"><span id="modal-divider-content">OR</span></p>
+							</div>
+							<form class="form-register" name ="Form" ng-submit="signUp()" novalidate>
+								<div class="form-group" ng-class="{'has-error':Form.name.$dirty && Form.name.$invalid, 'has-success':Form.name.$valid}">
+									<input type="text" class="form-control" name="name" ng-model="user.name" placeholder="Name*" required>
+									<span class="error text-small block" ng-if="Form.name.$dirty && Form.name.$invalid">Name is required</span>
+								</div>
+								<div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
+									<input type="email" class="form-control" name="email" ng-model="user.email" placeholder="Email*" required>
+									<span class="error text-small block" ng-if="Form.email.$dirty && Form.email.$error.required">Email is required.</span>
+									<span class="error text-small block" ng-if="Form.email.$error.email">Please, enter a valid email address.</span>
+								</div>
+								<div class="form-group" ng-class="{'has-error':Form.password.$dirty && Form.password.$invalid, 'has-success':Form.password.$valid}">
+									<input type="password" class="form-control" id="password" name="password" ng-model="user.password" placeholder="Password*" required>
+									<span class="error text-small block" ng-if="Form.password.$dirty && Form.password.$error.required">Password is required</span>
+								</div>
+								<div class="form-group" ng-class="{'has-error':Form.password2.$dirty && Form.password2.$error.compareTo || Form.password2.$dirty && Form.password2.$invalid, 'has-success':Form.password2.$valid}">
+									<input type="password" class="form-control" name="password2" ng-model="user.password2" placeholder="Repeat Password*" compare-to="user.password" required>
+									<span class="error text-small block" ng-if="Form.password2.$dirty && Form.password2.$error.required">Repeat password is required</span>
+									<span class="error text-small block" ng-if="Form.password2.$dirty && Form.password2.$error.compareTo">Passwords do not match!</span>
+								</div>
+								<div class="form-group" ng-class="{'has-error': Form.agrmntStatus.$dirty && Form.agrmntStatus.$invalid, 'has-success':Form.agrmntStatus.$valid}">
+									<div class="checkbox clip-check check-primary">
+										<input type="checkbox" id="agrmntStatus" name="agrmntStatus" ng-model="user.agrmntStatus" value=1 required="">
+										<label for="agrmntStatus">
+											I agree*
+										</label>
+									</div>
+								</div>
+								<div class="form-actions">		
+									<button type="submit" ng-disabled="Form.$invalid" class="btn btn-red btn-block">
+										Submit
+									</button>
+								</div>
+							</form>	
+						</div>
+					</div>
+                </div>
+            </script>			

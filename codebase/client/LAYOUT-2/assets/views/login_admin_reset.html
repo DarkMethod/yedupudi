@@ -1,0 +1,50 @@
+<!-- start: FORGOT -->
+<div class="row">
+    <div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5">
+        <div class="logo text-center">
+			<a ui-sref='landing.welcome'>
+				<img src="assets/images/logo-transparent-background.png" alt="{{app.name}}" class="img-responsive" />
+			</a>
+		</div>
+        <p class="text-center text-dark text-bold text-extra-large margin-top-15">
+            Reset Password
+        </p>
+        <!-- start: FORGOT BOX -->
+        <div class="box-forgot" ng-controller="authCtrl">
+			<div class="text-center">
+				{{ message }}
+			</div>
+			<p class="text-center">
+				Provide a new password for your account.
+			</p>
+            <form class="form-forgot" name="Form" ng-submit="resetPassword('admin')" novalidate>
+               <div class="form-group" ng-class="{'has-error':Form.password.$dirty && Form.password.$invalid, 'has-success':Form.password.$valid}">
+                    <input type="password" class="form-control" id="password" name="password" ng-model="user.password" placeholder="Password*" required>
+					<span class="error text-small block" ng-if="Form.password.$dirty && Form.password.$error.required">Password is required</span>
+				</div>
+                <div class="form-group" ng-class="{'has-error':Form.password2.$dirty && Form.password2.$error.compareTo || Form.password2.$dirty && Form.password2.$invalid, 'has-success':Form.password2.$valid}">
+                    <input type="password" class="form-control" name="password2" ng-model="user.password2" placeholder="Repeat Password*" compare-to="user.password" required>
+					<span class="error text-small block" ng-if="Form.password2.$dirty && Form.password2.$error.required">Repeat password is required</span>
+					<span class="error text-small block" ng-if="Form.password2.$dirty && Form.password2.$error.compareTo">Passwords do not match!</span>
+                </div>
+				<div class="form-actions">
+                    <button type="submit" ng-disabled="Form.$invalid" class="btn btn-red btn-block">
+                        Update
+                    </button>
+                </div>
+            </form>
+            <!--
+			<div class="text-center margin-top-15">
+                <strong>Need help?</strong> Learn more about how to <a href>retrieve an existing account.</a>
+            </div>
+			-->
+            <!-- start: COPYRIGHT -->
+            <div class="copyright margin-top-15">
+                {{app.year}} &copy; {{ app.name }} by {{ app.author }}.
+            </div>
+            <!-- end: COPYRIGHT -->
+        </div>
+        <!-- end: FORGOT BOX -->
+    </div>
+</div>
+<!-- end: FORGOT -->
